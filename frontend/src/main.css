@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a13939;
+    padding: 1rem;
+    color: rgb(24, 1, 1);
+  }
+  
+  .navbar-logo img {
+    height: 50px;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-links a {
+    color: rgb(118, 20, 20);
+    text-decoration: none;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home Page Styles */
+  .home {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  /* User Profile Styles */
+  .user-profile {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .profile-details {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .profile-details p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-details strong {
+    color: #000;
+  }
+  
+  /* Login and Register Form Styles */
+  .login,
+  .register {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login h2,
+  .register h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login form div,
+  .register form div {
+    margin-bottom: 1rem;
+  }
+  
+  .login label,
+  .register label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .login input,
+  .register input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .login button,
+  .register button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login button:hover,
+  .register button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Message Styles */
+  .message {
+    text-align: center;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

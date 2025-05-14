@@ -1,0 +1,56 @@
+/* UserDetails.css - Dark Theme */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.dark-theme .container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme h2 {
+    color: #bb86fc;
+    margin-bottom: 1.5rem;
+}
+
+.dark-theme .form-control {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+.dark-theme .form-control:focus {
+    background-color: #333;
+    border-color: #bb86fc;
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+.dark-theme .form-label {
+    color: #a0a0a0;
+}
+
+.dark-theme .btn-primary {
+    background-color: #bb86fc;
+    border-color: #bb86fc;
+    color: #121212;
+}
+
+.dark-theme .btn-primary:hover {
+    background-color: #9a67ea;
+    border-color: #9a67ea;
+}
+
+.dark-theme .btn-danger {
+    background-color: #cf6679;
+    border-color: #cf6679;
+}
+
+.dark-theme .btn-danger:hover {
+    background-color: #ba1d37;
+    border-color: #ba1d37;
+}

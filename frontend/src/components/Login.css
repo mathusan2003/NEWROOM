@@ -1,0 +1,193 @@
+/* Main container */
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+/* Login form container */
+.login-form-container {
+    width: 60%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: opacity 0.5s ease;
+}
+
+.login-form-container.fade-out {
+    opacity: 0;
+}
+
+.login-form-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Illustration side */
+.login-illustration {
+    flex: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Form side */
+.form-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+/* Door Animation */
+.door-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        #581845 0%,
+        #581845 20%,
+        #581845 40%,
+        #581845 60%,
+        #581845 80%,
+        #581845 100%
+    );
+    background-size: 200% 100%;
+    animation: woodGrain 5s infinite linear;
+    transition: transform 3s ease-in-out;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-size: 2rem;
+}
+
+@keyframes woodGrain {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.left-door {
+    left: 0;
+    transform-origin: left center;
+    border-right: 2px solid #581845;
+    animation: openLeftDoor 3s forwards;
+}
+
+.right-door {
+    right: 0;
+    transform-origin: right center;
+    border-left: 2px solid #581845;
+    animation: openRightDoor 3s forwards;
+}
+
+/* Door Handle Styles */
+.door-handle {
+    position: absolute;
+    width: 10px;
+    height: 60px;
+    background: linear-gradient(to right, #a8a8a8, #d8d8d8, #a8a8a8);
+    border-radius: 5px;
+    box-shadow: 
+        0 0 5px rgba(0,0,0,0.5),
+        inset 2px 0 3px rgba(255,255,255,0.3);
+    transform-style: preserve-3d;
+}
+
+.left-door .door-handle {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotateY(20deg);
+    animation: handleTurnLeft 2s ease-in-out forwards;
+}
+
+.right-door .door-handle {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotateY(-20deg);
+    animation: handleTurnRight 2s ease-in-out forwards;
+}
+
+/* Keyhole Styles */
+.keyhole {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: #333;
+    border-radius: 50% 50% 0 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-door .keyhole {
+    right: 60px;
+}
+
+.right-door .keyhole {
+    left: 60px;
+}
+
+/* Animations */
+@keyframes openLeftDoor {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(-100deg); }
+}
+
+@keyframes openRightDoor {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(100deg); }
+}
+
+@keyframes handleTurnLeft {
+    0% { transform: translateY(-50%) rotateY(20deg); }
+    100% { transform: translateY(-50%) rotateY(50deg); }
+}
+
+@keyframes handleTurnRight {
+    0% { transform: translateY(-50%) rotateY(-20deg); }
+    100% { transform: translateY(-50%) rotateY(-50deg); }
+}
+
+.welcome-message {
+    position: absolute;
+    color: rgb(53, 3, 3);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(85, 2, 2, 0.5);
+    opacity: 0;
+    animation: fadeInWelcome 1s ease-in 1.5s forwards;
+    z-index: 1001;
+}
+
+@keyframes fadeInWelcome {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
